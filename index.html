@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular2 playground</title>
+    <base href="/#">
+</head>
+
+<body>
+    <app>Loading...</app>
+</body>
+
+<!-- ES6-related imports -->
+<script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="/node_modules/systemjs/dist/system-csp-production.js"></script>
+
+<script>
+    //configure system loader
+    System.config({defaultJSExtensions: true});
+</script>
+<script src="/node_modules/angular2/bundles/angular2.min.js"></script>
+<script src="/node_modules/angular2/bundles/router.dev.js"></script>
+<script src="/node_modules/angular2/bundles/http.js"></script>
+
+<script>
+    //bootstrap the Angular2 application
+    System.import('dist/index').catch(console.log.bind(console));
+</script>
+
+</html>
